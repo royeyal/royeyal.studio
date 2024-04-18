@@ -131,11 +131,6 @@ a:hover .img-shadow {
 	filter: drop-shadow(5px 5px 5px var(--color--toggle-bg));
 }
 
-/*** Posts ***/
-.post-img.post-img-mobile {
-	box-shadow: none;
-}
-
 /*** Portfolio Grid ***/
 .grid-item-image-wrapper {
 	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
