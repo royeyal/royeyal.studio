@@ -4,7 +4,7 @@
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function setupSplits() {
-	const targets = gsap.utils.toArray(".heading-style-h1, .heading-style-h2");
+	const targets = gsap.utils.toArray(".heading-style-h1");
 	targets.forEach((target) => {
 		let splitHeading = new SplitText(target, {
 			type: "words, chars",
