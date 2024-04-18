@@ -7,4 +7,5 @@ Code relies on GSAP, so load first:
 2. GSAP ScrollTrigger
 3. GSAP SplitText
 
-4. [Direct link to main branch of JS file](https://cdn.jsdelivr.net/gh/royeyal.studio/mister-bond@main/royeyal.studio.js)
+[Direct link to main branch of JS file](https://cdn.jsdelivr.net/gh/royeyal.studio/mister-bond@main/royeyal.studio.js)
+[Direct link to main branch of CSS file](https://cdn.jsdelivr.net/gh/royeyal.studio/mister-bond@main/royeyal.studio.css)
