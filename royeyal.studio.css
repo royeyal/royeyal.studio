@@ -1,0 +1,146 @@
+::selection {
+	background-color: var(--swatch--brand-01);
+	color: var(--color--text-alt);
+}
+
+@supports (color: color(display-p3 1 1 1 / 1)) {
+	:root {
+		--swatch--brand-01: color(display-p3 1 0 0.746);
+		--swatch--brand-02: color(display-p3 0.011 0.993 0.978);
+	}
+}
+
+.heading {
+	text-wrap: balance;
+}
+
+/***
+* Cards
+* #cards > .cards > .card
+*/
+#cards::before,
+#cards::after {
+	content: unset;
+}
+
+#cards:hover>.card::after {
+	opacity: 1;
+}
+
+.card:hover::before {
+	opacity: 1;
+}
+
+.card::before,
+.card::after {
+	border-radius: inherit;
+	content: "";
+	height: 100%;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	transition: opacity 500ms;
+	width: 100%;
+}
+
+.card::before {
+	background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.10),
+			transparent 40%);
+	z-index: 3;
+}
+
+.card::after {
+	background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.80),
+			transparent 40%);
+	z-index: 1;
+}
+
+.card>.card-content {
+	border-radius: inherit;
+	inset: 1px;
+}
+
+/***********************/
+/** Dark mode toggle **/
+/*********************/
+.toggle_wrap {
+	height: auto;
+}
+
+.toggle_inner {
+	background-position: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 12px;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	transform-origin: 50% 50%;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c3dac3fe55448d149688_sun-white.svg');
+}
+
+.dark-mode .toggle_inner {
+	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c5cc575373ec2f5d7ee5_moon-black.svg');
+}
+
+/** Perspective image **/
+.img-perspective {
+	box-shadow: var(--swatch--brand-01) 0px 2.51941px 7.55822px 0px,
+		rgba(252, 120, 2, 0.008) 0px 5.97144px 17.9143px 0px,
+		rgba(252, 120, 2, 0.01) 0px 10.8925px 32.6776px 0px,
+		rgba(252, 120, 2, 0.02) 0px 18.1088px 54.3264px 0px,
+		rgba(252, 120, 2, 0.027) 0px 29.2442px 87.7327px 0px,
+		rgba(252, 120, 2, 0.047) 0px 47.8699px 143.61px 0px,
+		rgba(252, 120, 2, 0.082) 0px 82.4287px 247.286px 0px,
+		rgba(252, 120, 2, 0.15) 0px 150px 450px 0px;
+}
+
+.dark-mode .img-perspective {
+	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/657f4d80d13b05b913864036_browser-mac-dark.webp');
+}
+
+/******************/
+/** Vimeo Emded **/
+/****************/
+.embed-vimeo iframe {
+	width: 100%;
+	height: 100svh;
+}
+
+@media screen and (min-width: 768px) {
+	.embed-vimeo iframe {
+		height: 41svh;
+	}
+}
+
+/** Shadow **/
+a .img-shadow {
+	filter: drop-shadow(5px 5px 10px var(--color--toggle-bg));
+	transition: filter 200ms ease-in-out;
+	position: relative;
+}
+
+a:hover .img-shadow {
+	filter: drop-shadow(5px 5px 5px var(--color--toggle-bg));
+}
+
+/*** portfolio ***/
+.grid-item-image-wrapper {
+	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+	will-change: transform;
+}
+
+.grid-item-image-wrapper:hover {
+	box-shadow: 0 16px 35px 0 rgba(0, 0, 0, 0.27), 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+  .mf-cursor::before {
+    background: var(--swatch--brand-01);
+    transform:scale(0.7);
+  }
+  .mf-cursor-text {
+    font-weight: bold;
+  }
