@@ -86,6 +86,10 @@
 	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c5cc575373ec2f5d7ee5_moon-black.svg');
 }
 
+.dark-mode .logo3_wrapper img {
+	filter: invert(1);
+}
+
 /** Perspective image **/
 .img-perspective {
 	box-shadow: var(--swatch--brand-01) 0px 2.51941px 7.55822px 0px,
