@@ -8,4 +8,5 @@ Code relies on GSAP, so load first:
 3. GSAP SplitText
 
 [Direct link to main branch of JS file](https://cdn.jsdelivr.net/gh/royeyal.studio/mister-bond@main/royeyal.studio.js)
+
 [Direct link to main branch of CSS file](https://cdn.jsdelivr.net/gh/royeyal.studio/mister-bond@main/royeyal.studio.css)
