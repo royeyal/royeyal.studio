@@ -10,6 +10,23 @@
 	}
 }
 
+.w-richtext a::before {
+	background-color: var(--swatch--brand-01);
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .25s ease-out;
+    width: 100%;
+}
+.w-richtext a:hover::before {
+	transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .heading {
 	text-wrap: balance;
 }
