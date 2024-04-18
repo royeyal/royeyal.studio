@@ -1,2 +1,10 @@
 # royeyal.studio
 Code for royeyal.studio
+
+Code relies on GSAP, so load first:
+
+1. GSAP
+2. GSAP ScrollTrigger
+3. GSAP SplitText
+
+4. [Direct link to main branch of JS file](https://cdn.jsdelivr.net/gh/royeyal.studio/mister-bond@main/royeyal.studio.js)
