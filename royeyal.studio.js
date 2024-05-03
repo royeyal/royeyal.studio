@@ -25,7 +25,22 @@ function setupSplits() {
 		});
 	});
 }
-setupSplits();
+//setupSplits();
+
+let typeSplit = new SplitType('[animate]', {
+	types: 'lines, words, chars',
+	tagName: 'span'
+  })
+  
+  gsap.from('[animate] .line', {
+	y: '110%',
+	opacity: 0,
+	rotationZ: '10',
+	duration: 0.5,
+	ease: 'power1.out',
+	stagger: 0.1,
+	
+  })
 
 /***************************/
 /* Cuberto Mouse Follower */
