@@ -1,169 +1,236 @@
-::selection {
-	background-color: var(--swatch--brand-01);
-	color: var(--color--text-alt);
+/* Set color style to inherit */
+.inherit-color * {
+	color: inherit;
 }
 
-@supports (color: color(display-p3 1 1 1 / 1)) {
-	:root {
-		--swatch--brand-01: color(display-p3 1 0 0.746);
-		--swatch--brand-02: color(display-p3 0.011 0.993 0.978);
-	}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+	outline: 0.125rem solid #4d65ff;
+	outline-offset: 0.125rem;
 }
 
-.w-richtext a::before {
-	background-color: var(--swatch--brand-01);
-    bottom: 0;
-    content: '';
-    height: 2px;
-    left: 0;
-    position: absolute;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform .25s ease-out;
-    width: 100%;
-}
-.w-richtext a:hover::before {
-	transform: scaleX(1);
-    transform-origin: bottom left;
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext> :not(div):first-child,
+.w-richtext>div:first-child> :first-child {
+	margin-top: 0 !important;
 }
 
-.heading {
-	text-wrap: balance;
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child,
+.w-richtext ol li:last-child,
+.w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
 }
 
-/***
-* Cards
-* #cards > .cards > .card
-*/
-#cards::before,
-#cards::after {
-	content: unset;
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+	pointer-events: none;
 }
 
-#cards:hover>.card::after {
-	opacity: 1;
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+	pointer-events: auto;
 }
 
-.card:hover::before {
-	opacity: 1;
-}
-
-.card::before,
-.card::after {
-	border-radius: inherit;
+/* Create a class of .div-square which maintains a 1:1 dimension of a div */
+.div-square::after {
 	content: "";
-	height: 100%;
-	left: 0px;
-	opacity: 0;
-	position: absolute;
-	top: 0px;
-	transition: opacity 500ms;
-	width: 100%;
+	display: block;
+	padding-bottom: 100%;
 }
 
-.card::before {
-	background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-			rgba(255, 255, 255, 0.10),
-			transparent 40%);
-	z-index: 3;
+/* Make sure containers never lose their center alignment */
+.container-medium,
+.container-small,
+.container-large {
+	margin-right: auto !important;
+	margin-left: auto !important;
 }
 
-.card::after {
-	background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-			rgba(255, 255, 255, 0.80),
-			transparent 40%);
-	z-index: 1;
+/* 
+	  Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+	  Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+	  Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+	  */
+/*
+	  a,
+	  .w-input,
+	  .w-select,
+	  .w-tab-link,
+	  .w-nav-link,
+	  .w-dropdown-btn,
+	  .w-dropdown-toggle,
+	  .w-dropdown-link {
+		color: inherit;
+		text-decoration: inherit;
+		font-size: inherit;
+	  }
+	  */
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
-.card>.card-content {
-	border-radius: inherit;
-	inset: 1px;
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 
-/***********************/
-/** Dark mode toggle **/
-/*********************/
-.toggle_wrap {
-	height: auto;
+/* Adds inline flex display */
+.display-inlineflex {
+	display: inline-flex;
 }
 
-.toggle_inner {
-	background-position: center;
-	width: 22px;
-	height: 22px;
-	border-radius: 12px;
-	background-size: 16px 16px;
-	background-repeat: no-repeat;
-	transform-origin: 50% 50%;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
-	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c3dac3fe55448d149688_sun-white.svg');
+/* These classes are never overwritten */
+.hide {
+	display: none !important;
 }
 
-.dark-mode .toggle_inner {
-	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c5cc575373ec2f5d7ee5_moon-black.svg');
-}
+@media screen and (max-width: 991px) {
 
-.dark-mode .logo3_wrapper img {
-	filter: invert(1);
-}
-
-/** Perspective image **/
-.img-perspective {
-	box-shadow: var(--swatch--brand-01) 0px 2.51941px 7.55822px 0px,
-		rgba(252, 120, 2, 0.008) 0px 5.97144px 17.9143px 0px,
-		rgba(252, 120, 2, 0.01) 0px 10.8925px 32.6776px 0px,
-		rgba(252, 120, 2, 0.02) 0px 18.1088px 54.3264px 0px,
-		rgba(252, 120, 2, 0.027) 0px 29.2442px 87.7327px 0px,
-		rgba(252, 120, 2, 0.047) 0px 47.8699px 143.61px 0px,
-		rgba(252, 120, 2, 0.082) 0px 82.4287px 247.286px 0px,
-		rgba(252, 120, 2, 0.15) 0px 150px 450px 0px;
-}
-
-.dark-mode .img-perspective {
-	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/657f4d80d13b05b913864036_browser-mac-dark.webp');
-}
-
-/******************/
-/** Vimeo Emded **/
-/****************/
-.embed-vimeo iframe {
-	width: 100%;
-	height: 100svh;
-}
-
-@media screen and (min-width: 768px) {
-	.embed-vimeo iframe {
-		height: 41svh;
+	.hide,
+	.hide-tablet {
+		display: none !important;
 	}
 }
 
-/** Shadow **/
-a .img-shadow {
-	filter: drop-shadow(5px 5px 10px var(--color--toggle-bg));
-	transition: filter 200ms ease-in-out;
-	position: relative;
+@media screen and (max-width: 767px) {
+	.hide-mobile-landscape {
+		display: none !important;
+	}
 }
 
-a:hover .img-shadow {
-	filter: drop-shadow(5px 5px 5px var(--color--toggle-bg));
+@media screen and (max-width: 479px) {
+	.hide-mobile {
+		display: none !important;
+	}
 }
 
-/*** Portfolio Grid ***/
-.grid-item-image-wrapper {
-	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
-	will-change: transform;
+.margin-0 {
+	margin: 0rem !important;
 }
 
-.grid-item-image-wrapper:hover {
-	box-shadow: 0 16px 35px 0 rgba(0, 0, 0, 0.27), 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+.padding-0 {
+	padding: 0rem !important;
 }
 
-/*** Custom Cursor ***/
-.mf-cursor::before {
-	background: var(--swatch--brand-01);
-	transform: scale(0.7);
+.spacing-clean {
+	padding: 0rem !important;
+	margin: 0rem !important;
 }
 
-.mf-cursor-text {
-	font-weight: bold;
+.margin-top {
+	margin-right: 0rem !important;
+	margin-bottom: 0rem !important;
+	margin-left: 0rem !important;
+}
+
+.padding-top {
+	padding-right: 0rem !important;
+	padding-bottom: 0rem !important;
+	padding-left: 0rem !important;
+}
+
+.margin-right {
+	margin-top: 0rem !important;
+	margin-bottom: 0rem !important;
+	margin-left: 0rem !important;
+}
+
+.padding-right {
+	padding-top: 0rem !important;
+	padding-bottom: 0rem !important;
+	padding-left: 0rem !important;
+}
+
+.margin-bottom {
+	margin-top: 0rem !important;
+	margin-right: 0rem !important;
+	margin-left: 0rem !important;
+}
+
+.padding-bottom {
+	padding-top: 0rem !important;
+	padding-right: 0rem !important;
+	padding-left: 0rem !important;
+}
+
+.margin-left {
+	margin-top: 0rem !important;
+	margin-right: 0rem !important;
+	margin-bottom: 0rem !important;
+}
+
+.padding-left {
+	padding-top: 0rem !important;
+	padding-right: 0rem !important;
+	padding-bottom: 0rem !important;
+}
+
+.margin-horizontal {
+	margin-top: 0rem !important;
+	margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+	padding-top: 0rem !important;
+	padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+	margin-right: 0rem !important;
+	margin-left: 0rem !important;
+}
+
+.padding-vertical {
+	padding-right: 0rem !important;
+	padding-left: 0rem !important;
+}
+
+/* Apply "..." at 100% width */
+.truncate-width {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Removes native scrollbar */
+.no-scrollbar {
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	font-size: calc(0.625rem + 0.41666666666666663vw);
+}
+
+@media screen and (max-width:1920px) {
+	html {
+		font-size: calc(0.625rem + 0.41666666666666674vw);
+	}
+}
+
+@media screen and (max-width:1440px) {
+	html {
+		font-size: calc(0.8126951092611863rem + 0.20811654526534862vw);
+	}
+}
+
+@media screen and (max-width:479px) {
+	html {
+		font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+	}
 }
