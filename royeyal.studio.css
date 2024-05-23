@@ -1,3 +1,16 @@
+/* Dark Mode */
+.dark-mode .toggle_inner {
+	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c5cc575373ec2f5d7ee5_moon-black.svg');
+}
+.dark-mode .logo3_wrapper img {
+	filter: invert(1);
+}
+
+/* Custom Cursor */
+.mf-cursor-text{
+    color: var(--color--text-alt);
+  }
+
 /* Set color style to inherit */
 .inherit-color * {
 	color: inherit;
