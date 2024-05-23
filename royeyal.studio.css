@@ -2,14 +2,37 @@
 .dark-mode .toggle_inner {
 	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c5cc575373ec2f5d7ee5_moon-black.svg');
 }
+
 .dark-mode .logo3_wrapper img {
 	filter: invert(1);
 }
 
 /* Custom Cursor */
-.mf-cursor-text{
-    color: var(--color--text-alt);
-  }
+.mf-cursor-text {
+	color: var(--color--text-alt);
+}
+
+/** Perspective image **/
+.img-perspective {
+	box-shadow: var(--swatch--brand-01) 0px 2.51941px 7.55822px 0px,
+		rgba(252, 120, 2, 0.008) 0px 5.97144px 17.9143px 0px,
+		rgba(252, 120, 2, 0.01) 0px 10.8925px 32.6776px 0px,
+		rgba(252, 120, 2, 0.02) 0px 18.1088px 54.3264px 0px,
+		rgba(252, 120, 2, 0.027) 0px 29.2442px 87.7327px 0px,
+		rgba(252, 120, 2, 0.047) 0px 47.8699px 143.61px 0px,
+		rgba(252, 120, 2, 0.082) 0px 82.4287px 247.286px 0px,
+		rgba(252, 120, 2, 0.15) 0px 150px 450px 0px;
+}
+.dark-mode .img-perspective {
+	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/657f4d80d13b05b913864036_browser-mac-dark.webp');
+}
+/******************/
+/** Vimeo Emded **/
+/****************/
+.embed-vimeo iframe {
+	width: 100%;
+	height: 100svh;
+}
 
 /* Set color style to inherit */
 .inherit-color * {
