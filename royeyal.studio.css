@@ -1,3 +1,15 @@
+::selection {
+	background-color: var(--swatch--brand-01);
+	color: var(--color--text-alt);
+}
+
+@supports (color: color(display-p3 1 1 1 / 1)) {
+	:root {
+		--swatch--brand-01: color(display-p3 1 0 0.746);
+		--swatch--brand-02: color(display-p3 0.011 0.993 0.978);
+	}
+}
+
 /* Dark Mode */
 .dark-mode .toggle_inner {
 	background-image: url('https://uploads-ssl.webflow.com/62af866a9b6a1e09cf0c89b1/6574c5cc575373ec2f5d7ee5_moon-black.svg');
