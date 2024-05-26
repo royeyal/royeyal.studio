@@ -1,6 +1,8 @@
 ::selection {
 	background-color: var(--swatch--brand-01);
 	color: var(--color--text-alt);
+	-webkit-text-fill-color: var(--color--text-alt);
+	text-fill-color: var(--color--text-alt);
 }
 
 @supports (color: color(display-p3 1 1 1 / 1)) {
