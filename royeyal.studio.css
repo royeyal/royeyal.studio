@@ -1,3 +1,43 @@
+/* Code blocks */
+.w-code-block {
+	box-shadow: 0 7px 15px -3px rgba(0, 0, 0, 0.15),
+		0 15px 30px -10px rgba(0, 0, 0, 0.27);
+	border-radius: 9px;
+	font-family: "SF Mono", SFMono-Regular, ui-monospace,
+		"DejaVu Sans Mono", Menlo, Consolas, monospace;
+	margin-bottom: 1rem;
+}
+.w-code-block code {
+	box-shadow: none !important;
+}
+
+.w-video iframe {
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.w-richtext figure.w-richtext-align-center {
+	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+		0 5px 15px 0 rgba(0, 0, 0, 0.08);
+	margin: 3rem auto;
+}
+
+.w-richtext h2 {
+	margin-top: 1rem;
+}
+
+pre code::before {
+	width: -webkit-fill-available;
+}
+
+.w-script {
+	margin-bottom: 2rem;
+}
+
 ::selection {
 	background-color: var(--swatch--brand-01);
 	color: var(--color--text-alt);
