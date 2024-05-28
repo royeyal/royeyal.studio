@@ -7,6 +7,7 @@
 		"DejaVu Sans Mono", Menlo, Consolas, monospace;
 	margin-bottom: 1rem;
 }
+
 .w-code-block code {
 	box-shadow: none !important;
 }
@@ -21,9 +22,13 @@
 }
 
 .w-richtext figure.w-richtext-align-center {
+	margin: 3rem auto;
+}
+
+.w-richtext figure img {
 	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
 		0 5px 15px 0 rgba(0, 0, 0, 0.08);
-	margin: 3rem auto;
+	border-radius: var(--border-radius, .5rem);
 }
 
 .w-richtext h2 {
