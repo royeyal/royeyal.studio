@@ -1,4 +1,6 @@
-/* Code blocks */
+/******************/
+/** Code Blocks **/
+/****************/
 .w-code-block {
 	box-shadow: 0 7px 15px -3px rgba(0, 0, 0, 0.15),
 		0 15px 30px -10px rgba(0, 0, 0, 0.27);
@@ -62,9 +64,9 @@ pre code::before {
 	margin-bottom: 2rem;
 }
 
-/* *********** */
-/* Main Site */
-/* *********** */
+/****************/
+/** Main Site **/
+/**************/
 ::selection {
 	background-color: var(--swatch--brand-01);
 	color: var(--color--text-alt);
@@ -101,6 +103,9 @@ pre code::before {
 	height: 100svh;
 }
 
+/*************/
+/** Relume **/
+/***********/
 /* Set color style to inherit */
 .inherit-color * {
 	color: inherit;
