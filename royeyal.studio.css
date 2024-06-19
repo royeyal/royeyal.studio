@@ -124,7 +124,7 @@ figcaption {
 .w-richtext a {
 	position: relative;
 }
-.w-richtext::after {
+.w-richtext a::after {
 	background-color: var(--swatch--brand-01, #f900b9);
     bottom: 0;
     content: '';
