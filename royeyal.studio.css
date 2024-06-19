@@ -121,10 +121,10 @@ figcaption {
 	display: inline-block;
 }
 
-.w-richtext a {
+.w-richtext p a {
 	position: relative;
 }
-.w-richtext a::after {
+.w-richtext p a::after {
 	background-color: var(--swatch--brand-01, #f900b9);
     bottom: 0;
     content: '';
@@ -136,6 +136,10 @@ figcaption {
     transition: transform .25s ease-out;
     width: 100%;
 }
+.w-richtext p a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+  }
 
 /*************/
 /** Relume **/
