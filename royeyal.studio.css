@@ -121,6 +121,22 @@ figcaption {
 	display: inline-block;
 }
 
+.w-richtext a {
+	position: relative;
+}
+.w-richtext::after {
+	background-color: var(--swatch--brand-01, #f900b9);
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .25s ease-out;
+    width: 100%;
+}
+
 /*************/
 /** Relume **/
 /***********/
