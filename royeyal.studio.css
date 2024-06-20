@@ -155,7 +155,7 @@ figcaption {
 /* Focus state style for keyboard navigation for the focusable elements */
 *[tabindex]:focus-visible,
 input[type="file"]:focus-visible {
-	outline: 0.125rem solid #4d65ff;
+	outline: 0.125rem solid var(--swatch--brand-01, #f900b9);
 	outline-offset: 0.125rem;
 }
 
