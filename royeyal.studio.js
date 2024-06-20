@@ -86,23 +86,20 @@ const cursor = new MouseFollower({
 /* Conic Gradient */
 /*****************/
 document.addEventListener("DOMContentLoaded", function () {
-	const glowDiv = document.querySelector(".grid-item-image-wrapper");
+	const glowDivs = Array.prototype.slice.apply(
+		document.querySelectorAll(".grid-item-image-wrapper")
+	  );
 	let angle = 132;
 
 	function updateGradient() {
-		angle = (angle + 0.3) % 360;
-		glowDiv.style.setProperty(
-			"--gradient-angle",
-			`${angle}deg`
-		);
-
-		if (
-			window.matchMedia("(prefers-reduced-motion)").matches
-		) {
-			return;
-		}
+		glowDivs.forEach(item => {
+			angle = (angle + 0.3) % 360;
+			item.style.setProperty(
+				"--gradient-angle",
+				`${angle}deg`
+			);
+		});
 		requestAnimationFrame(updateGradient);
 	}
-
 	updateGradient();
 });
