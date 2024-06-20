@@ -151,8 +151,10 @@ figcaption {
 	--conic-radius: .5rem;
 	--conic-padding: .125rem;
 	--wwdc-1: #481d58;
-	--wwdc-2: #ff9999;
+	/* --wwdc-2: #ff9999; */
+	--wwdc-2: var(--swatch--brand-01, #f900b9);
 	--wwdc-3: #fff;
+	--gradient-angle: 132deg;
 }
 .grid-item-image-wrapper {
 	background: transparent;
