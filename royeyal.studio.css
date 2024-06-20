@@ -144,6 +144,45 @@ figcaption {
 	transform-origin: bottom left;
 }
 
+/**********************/
+/** Conic gradients **/
+/********************/
+:root {
+	--conic-radius: .5rem;
+	--conic-padding: .125rem;
+	--wwdc-1: #481d58;
+	--wwdc-2: #ff9999;
+	--wwdc-3: #fff;
+}
+.grid-item-image-wrapper {
+	background: transparent;
+	position: relative;
+	border-radius: var(--conic-radius, 0.5rem);
+	padding: var(--conic-padding, .125rem);
+}
+
+.grid-item-image-wrapper::before,
+.grid-item-image-wrapper::after {
+	content: "";
+	background: conic-gradient(
+		from var(--gradient-angle, 132deg),
+		var(--wwdc-1),
+		var(--wwdc-2),
+		var(--wwdc-3),
+		var(--wwdc-2),
+		var(--wwdc-1)
+	);
+	position: absolute;
+	z-index: -1;
+	inset: -0.15em;
+	border-radius: calc( var(--border-radius, 0.5rem) + var(--conic-radius, .5rem) );
+	opacity: 0.65;
+}
+
+.grid-item-image-wrapper::after {
+	opacity: 0;
+}
+
 /*************/
 /** Relume **/
 /***********/

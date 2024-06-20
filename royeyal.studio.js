@@ -81,3 +81,28 @@ const cursor = new MouseFollower({
 	skewing: 1, // Skewing effect for the cursor
 	skewingText: 3, // Skewing effect specifically for the text in the cursor
 });
+
+/*******************/
+/* Conic Gradient */
+/*****************/
+document.addEventListener("DOMContentLoaded", function () {
+	const glowDiv = document.querySelector(".grid-item-image-wrapper");
+	let angle = 132;
+
+	function updateGradient() {
+		angle = (angle + 0.3) % 360;
+		glowDiv.style.setProperty(
+			"--gradient-angle",
+			`${angle}deg`
+		);
+
+		if (
+			window.matchMedia("(prefers-reduced-motion)").matches
+		) {
+			return;
+		}
+		requestAnimationFrame(updateGradient);
+	}
+
+	updateGradient();
+});
