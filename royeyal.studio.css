@@ -79,9 +79,10 @@ pre code::before {
 .mf-cursor-text {
 	color: var(--color--text-alt);
 }
+
 .mf-cursor::before {
 	box-shadow: 0 12px 16px -6px var(--swatch--brand-hover);
-    border: 2px solid var(--swatch--brand-01);
+	border: 2px solid var(--swatch--brand-01);
 }
 
 /******************/
@@ -121,25 +122,27 @@ figcaption {
 	display: inline-block;
 }
 
-.w-richtext p > a {
+.w-richtext p>a {
 	position: relative;
 }
-.w-richtext p > a::after {
+
+.w-richtext p>a::after {
 	background-color: var(--swatch--brand-01, #f900b9);
-    bottom: 0;
-    content: '';
-    height: 2px;
-    left: 0;
-    position: absolute;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform .25s ease-out;
-    width: 100%;
+	bottom: 0;
+	content: '';
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform .25s ease-out;
+	width: 100%;
 }
-.w-richtext p > a:hover::after {
+
+.w-richtext p>a:hover::after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
-  }
+}
 
 /*************/
 /** Relume **/
