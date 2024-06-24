@@ -159,7 +159,7 @@ figcaption {
 .grid-item-image-wrapper {
 	background: transparent;
 	position: relative;
-	border-radius: var(--conic-radius, 0.5rem);
+	border-radius: calc( var(--border-radius, 0.5rem) + var(--conic-radius, .5rem) );
 	padding: var(--conic-padding, .125rem);
 }
 
@@ -177,7 +177,7 @@ figcaption {
 	position: absolute;
 	z-index: -1;
 	inset: -0.15em;
-	border-radius: calc( var(--border-radius, 0.5rem) + var(--conic-radius, .5rem) );
+	border-radius: var(--conic-radius, 0.5rem);
 	opacity: 0.65;
 }
 
