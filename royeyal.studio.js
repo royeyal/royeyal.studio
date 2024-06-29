@@ -87,7 +87,7 @@ const cursor = new MouseFollower({
 /*****************/
 document.addEventListener("DOMContentLoaded", function () {
 	const glowDivs = Array.prototype.slice.apply(
-		document.querySelectorAll(".grid-item-image-wrapper")
+		document.querySelectorAll(".conic-gradient-wrapper")
 	  );
 	let angle = 132;
 

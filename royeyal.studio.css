@@ -156,15 +156,15 @@ figcaption {
 	--wwdc-3: #fff;
 	--gradient-angle: 132deg;
 }
-.grid-item-image-wrapper {
+.conic-gradient-wrapper {
 	background: transparent;
 	position: relative;
 	border-radius: calc( var(--border-radius, 0.5rem) + var(--conic-radius, .5rem) );
 	padding: var(--conic-padding, .125rem);
 }
 
-.grid-item-image-wrapper::before,
-.grid-item-image-wrapper::after {
+.conic-gradient-wrapper::before,
+.conic-gradient-wrapper::after {
 	content: "";
 	background: conic-gradient(
 		from var(--gradient-angle, 132deg),
@@ -181,7 +181,7 @@ figcaption {
 	opacity: 0.65;
 }
 
-.grid-item-image-wrapper::after {
+.conic-gradient-wrapper::after {
 	opacity: 0;
 }
 
