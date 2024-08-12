@@ -55,20 +55,20 @@ setupSplits();
 // 	once: true
 //   });
 
-gsap.utils.toArray('.w-richtext p, .w-richtext h2, .w-richtext h3, .w-richtext li').forEach(el => {
-	gsap.from(el, {
-	  opacity: 0, // Start with opacity 0
-	  duration: 1, // Animation duration
-	  scrollTrigger: {
-		trigger: el, // Element to trigger the animation
-		start: "top 80%", // Start animation when element is 80% in view
-		end: "bottom 20%", // End animation when element is 20% out of view
-		toggleActions: "play none none reverse", // Play animation on enter, reverse on exit
-		stagger: 0.15,
-      	ease: "power4.inOut",
-	  },
-	});
-  });
+// gsap.utils.toArray('.w-richtext p, .w-richtext h2, .w-richtext h3, .w-richtext li').forEach(el => {
+// 	gsap.from(el, {
+// 	  opacity: 0, // Start with opacity 0
+// 	  duration: 1, // Animation duration
+// 	  scrollTrigger: {
+// 		trigger: el, // Element to trigger the animation
+// 		start: "top 80%", // Start animation when element is 80% in view
+// 		end: "bottom 20%", // End animation when element is 20% out of view
+// 		toggleActions: "play none none reverse", // Play animation on enter, reverse on exit
+// 		stagger: 0.15,
+//       	ease: "power4.inOut",
+// 	  },
+// 	});
+//   });
   
 
 /***************************/
