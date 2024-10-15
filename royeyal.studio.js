@@ -9,19 +9,21 @@ function setupSplits() {
 	]);
 	targets.forEach((target) => {
 		let splitHeading = new SplitText(target, {
-			type: "words, chars",
+			type: "lines",
 		});
 		let chars = splitHeading.chars; //an array of all the divs that wrap each character
 		gsap.from(chars, {
-			yPercent: 130,
-			stagger: 0.05,
-			ease: "back.out",
-			duration: 0.7,
+			yPercent: 100,
+			opacity: 0,
+			stagger: 0.8,
+			ease: "circ.inOut",
+			duration: 0.8,
+			delay: -0.3,
 			scrollTrigger: {
 				trigger: target,
 				//markers: true,
-				start: "top 75%",
-				end: "bottom center",
+				start: "0% center",
+				end: "99% center",
 				//scrub: true
 			},
 		});
