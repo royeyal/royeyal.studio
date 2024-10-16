@@ -22,7 +22,7 @@ function setupSplits() {
 			scrollTrigger: {
 				trigger: target,
 				//markers: true,
-				start: "0% center",
+				start: "0% top",
 				end: "99% center",
 				//scrub: true
 			},
@@ -30,48 +30,6 @@ function setupSplits() {
 	});
 }
 setupSplits();
-
-// let typeSplit = new SplitType("[animate]", {
-// 	types: "lines, words, chars",
-// 	tagName: "span",
-// });
-
-// gsap.from("[animate] .line", {
-// 	y: "110%",
-// 	opacity: 0,
-// 	rotationZ: "10",
-// 	duration: 0.5,
-// 	ease: "power1.out",
-// 	stagger: 0.1,
-// });
-
-// ScrollTrigger.batch(".w-richtext p", {
-// 	onEnter: elements => {
-// 	  gsap.from(elements, {
-// 		autoAlpha: 0,
-// 		y: 60,
-// 		stagger: 0.15,
-// 		ease: "power4.inOut",
-// 	  });
-// 	},
-// 	once: true
-//   });
-
-// gsap.utils.toArray('.w-richtext p, .w-richtext h2, .w-richtext h3, .w-richtext li').forEach(el => {
-// 	gsap.from(el, {
-// 	  opacity: 0, // Start with opacity 0
-// 	  duration: 1, // Animation duration
-// 	  scrollTrigger: {
-// 		trigger: el, // Element to trigger the animation
-// 		start: "top 80%", // Start animation when element is 80% in view
-// 		end: "bottom 20%", // End animation when element is 20% out of view
-// 		toggleActions: "play none none reverse", // Play animation on enter, reverse on exit
-// 		stagger: 0.15,
-//       	ease: "power4.inOut",
-// 	  },
-// 	});
-//   });
-  
 
 /***************************/
 /* Cuberto Mouse Follower */
